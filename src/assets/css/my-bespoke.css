@@ -1,0 +1,798 @@
+.bes-nav {
+  background: #fff;
+  border: 1px #e5e5e5 solid;
+  border-radius: 2px;
+  height: 48px;
+  margin: 20px auto 10px;
+  padding-left: 18px;
+  width: 1180px;
+}
+
+.bes-nav span,
+.bes-nav em {
+  display: inline-block;
+  color: #666;
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.bes-nav span {
+  margin-right: 13px;
+}
+
+.bes-nav em {
+  color: #1fc19a;
+  cursor: pointer;
+}
+
+.bes-cont {
+  margin: 0 auto 43px;
+  width: 1200px;
+}
+
+.bes-left {
+  background: #fff;
+  border-radius: 2px;
+  float: left;
+  margin: 20px 0 10px 0;
+  width: 220px;
+  height: auto;
+}
+
+.bes-left h2,
+.bes-left li dt {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #f2f2f2
+}
+
+.bes-left li dd,
+.bes-left li dd a {
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+}
+
+.bes-left li dd a {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+    overflow: hidden;
+ justify-content: center;
+    display: table;  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+.bes-left li dd a img{
+     float: left;
+    vertical-align: middle;
+    margin-top: 14px;
+}
+.bes-left li dd a span {
+  display: block;
+  font-size: 14px;
+  margin-left: 8px;
+  width: 160px;
+  float: left;
+}
+
+.bes-left_top img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.bes-left_title {
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+  display: inline-block;
+  line-height: 20px;
+  width: 100%
+}
+
+.bes-left_top {
+  width: 220px;
+  height: 220px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  background: url('../img/new/background.png');
+}
+
+.bes-right {
+  float: right;
+  width: 990px;
+}
+
+.bes-r-cont {
+  background: #fff;
+  border: 1px #e5e5e5 solid;
+  border-radius: 2px;
+  padding: 10px 18px 0;
+}
+
+.bes-r-cont-tit {
+  border-bottom: 1px #e5e5e5 solid;
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.bes-list {}
+
+.bes-list li {
+  border-bottom: 1px #e5e5e5 solid;
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+    zoom:1;
+    overflow: hidden;
+ justify-content: center;
+    display: table;  align-items: center;
+  height: 132px;
+}
+.bes-list li h3{
+  float: left;
+}
+.bes-list li:nth-last-child(1) {
+  border: none;
+}
+
+.bes-list li img {
+  border-radius: 4px;
+  display: block;
+  height: 90px;
+  margin-right: 22px;
+  width: 90px;
+}
+
+.bes-list li .cont {
+  flex: 1;
+}
+
+.bes-cont-cent-tit {
+  font-size: 24px;
+  height: 42px;
+  line-height: 42px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 510px;
+}
+
+.bes-jindu {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  padding-top: 18px;
+}
+
+.bes-jindu .tou-pic {
+  background: url(../img/tou.png) no-repeat 0 0;
+  cursor: pointer;
+  display: block;
+  height: 34px;
+  width: 28px;
+}
+
+.bes-tiao {
+  height: 24px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.bes-tiao .dian {
+  background: url(../img/ico.png) no-repeat 14px -411px #1FC19A;
+  float: left;
+  height: 24px;
+  width: 40px;
+}
+
+.bes-tiao .dian-guan {
+  border: 1px #1FC19A solid;
+  border-left: none;
+  float: left;
+  height: 22px;
+  width: 149px;
+}
+
+.bes-tiao .dian-guan span {
+  background: #9ae3d0;
+  float: left;
+  height: 22px;
+}
+
+.bes-tiao .txt {
+  color: #1fc19a;
+  float: left;
+  font-size: 22px;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 11px;
+}
+
+.bes-list li .act {
+  align-items: center;
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  justify-content: space-between;
+  width: 150px;
+}
+
+.bes-list li .act .see {
+  border: 1px #e5e5e5 solid;
+  border-radius: 20px;
+  color: #666;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 106px;
+}
+
+.bes-list li .act .del {
+  background: url(../img/ico.png) no-repeat 0 -456px;
+  cursor: pointer;
+  display: block;
+  height: 21px;
+  width: 18px;
+}
+
+.page {
+  height: 30px;
+  padding: 37px 0;
+  text-align: right;
+}
+
+.page a {
+  border: 1px #e5e5e5 solid;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 28px;
+  margin-left: 5px;
+  padding: 0 10px;
+}
+
+.page a.on,
+.page a:hover {
+  border-color: #1FC19A;
+  color: #1FC19A;
+}
+
+
+/* 发布管理  */
+
+.fabu {
+  color: #1fc19a;
+  font-size: 16px;
+  line-height: 48px;
+  margin-right: 20px;
+  float: right;
+}
+
+.fa-tits {
+  border-bottom: 1px #e5e5e5 solid;
+  align-items: center;
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  height: 28px;
+  padding: 20px 0;
+}
+
+.fa-tits input {
+  margin: 0 27px 0 10px;
+  height: 12px;
+  width: 12px;
+}
+
+.btn-shear,
+.btn-shear-del {
+  background: url(../img/ico.png) no-repeat 7px -689px #eee;
+  border-radius: 2px;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 10px;
+  padding: 0 10px 0 27px;
+}
+
+.btn-shear-del {
+  background: url(../img/ico.png) no-repeat 7px -729px #eee;
+  margin-right: 424px;
+}
+
+.z-state {
+  color: #666;
+  font-size: 14px;
+  width: 140px;
+}
+
+.fa-list li {
+  height: 123px;
+}
+
+.fa-list li .check {
+  margin: 0 27px 0 10px;
+  height: 12px;
+  width: 12px;
+}
+
+.fa-list li .bes-cont-cent-tit {
+  color: #1FC19A;
+  font-size: 20px;
+}
+
+.fa-list li .ji-zz {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  width: 240px;
+}
+
+.fa-list li .acmt {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  align-items: center;
+  height: 100%;
+  position: relative;
+  width: 145px;
+}
+
+.fa-list li .acmt span {
+  background: url(../img/ico.png) no-repeat;
+  color: #1FC19A;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 18px;
+  width: 125px;
+}
+
+.fa-list li .acmt .act-edit-btn {
+  background-position: 0 -493px;
+}
+
+.fa-list li .acmt .act-detail-btn {
+  background-position: 0 -533px;
+}
+
+.fa-list li .acmt .act-shear-btn {
+  background-position: 0 -573px;
+}
+
+.fa-list li .acmt .act-del-btn {
+  background-position: 0 -613px;
+}
+
+.fa-list li .acmt .act-start-btn {
+  background-position: 0 -653px;
+}
+
+.fa-list li .cont,
+.fa-list li .bes-cont-cent-tit {
+  width: 408px;
+}
+
+.cc-act {
+  height: 36px;
+  padding-top: 12px;
+}
+
+.cc-act p {
+  color: #666;
+  font-size: 16px;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  width: 130px;
+}
+
+.cc-act p em {
+  color: #1FC19A;
+}
+
+.share-alert {
+  background: #fff;
+  border: 1px #e5e5e5 solid;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  right: 73px;
+  position: absolute;
+  top: 84px;
+  height: 116px;
+  width: 358px;
+  z-index: 100;
+}
+
+.share-alert .up {
+  background: url(../img/up-sh.png) no-repeat 0 0;
+  height: 13px;
+  right: 40px;
+  position: absolute;
+  top: -13px;
+  width: 26px;
+}
+
+.share-alert p {
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+  width: 230px;
+}
+
+.share-alert div,
+.share-alert div img {
+  height: 72px;
+  width: 72px;
+}
+
+.share-alert div {
+  border: 1px #e5e5e5 solid;
+  padding: 5px;
+}
+
+
+/* 预约列表 */
+
+.yuyue-list li {
+  height: 120px;
+}
+
+.yuyue-list .yy-l {
+  padding-left: 30px;
+  width: 277px;
+}
+
+.yuyue-list .yy-mid {
+  flex: 1;
+}
+
+.yuyue-list .yy-mid p,
+.yuyue-list .yy-r p,
+.yuyue-list .yy-l p {
+  color: #666;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.yuyue-list .yy-r {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  flex-direction: column;
+  height: 92px;
+  width: 157px;
+}
+
+
+/* 账户设置 */
+
+.user-list {}
+
+.user-list li {
+  height: 100px;
+  width: 100%
+}
+
+.user-list li .user-tit {
+  border-right: 1px #e5e5e5 solid;
+  color: #333;
+  font-size: 18px;
+  height: 100px;
+  line-height: 100px;
+  margin-right: 30px;
+  padding-right: 30px;
+  text-align: right;
+  width: 72px;
+}
+
+.user-list li .user-cont{
+  float: left;
+}
+.user-list li .change-btn {
+  float: right;
+  margin-top: 40px;
+}
+.user-list li img {
+  /*border-radius: 50%;*/
+  height: 48px;
+  width: 48px;
+  margin-top: 26px;
+}
+
+.change-btn {
+  border: 1px #e5e5e5 solid;
+  border-radius: 19px;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 90px;
+}
+
+.change-btn:hover {
+  border-color: #1FC19A;
+  color: #1FC19A;
+}
+
+.user-list li .user-cont p {
+  color: #666;
+  font-size: 16px;
+  line-height: 100px;
+  display: inline-block;
+}
+
+
+/*我的预约*/
+
+.right_top {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.reservation_top_five {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+    zoom:1;
+    overflow: hidden;
+ justify-content: center;
+    display: table;}
+
+
+.reservation_b_10 {
+  margin-bottom: 30px;
+}
+
+.reservation_top_five ul {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+  zoom:1;
+    overflow: hidden;
+    display: table;  width: 100%;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.reservation_top_five ul li {
+  float: left;
+  font-size: 18px;
+  margin-right: 30px;
+  line-height: 40px;
+  padding:0px 12px;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+
+.reservation_top_five ul li.on {
+  border-bottom: 2px solid #046738;
+}
+
+.reservation_center h2 {
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  line-height: 40px;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.reservation_center h2 img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-flex;
+  margin: auto 10px auto 0;
+}
+
+.yy-btn_heih {
+  width: 220px;
+  height: 100px;
+ display: -webkit-box; 
+    display: -moz-box; 
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+ justify-content: center;
+    display: table;  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.yy-btn_heih_jxz {
+  width: 100%;
+  font-size: 18px;
+  text-align: right;
+  color: #046738;
+  line-height: 20px;
+}
+
+.yy-btn_heih_right,
+.yy-btn_heih_left {
+  width: 93px;
+  height: 35px;
+  border-radius: 20px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  float: right
+}
+
+.yy-btn_heih_right {
+  border: 1px solid #666;
+  color: #666;
+  margin-right: 20px;
+}
+
+.yy-btn_heih_left {
+
+  border: 1px solid #046738;
+  color: #046738;
+}
+
+.yy-list {
+  background: transparent;
+}
+
+.yy-list li {
+  border-bottom: 1px solid #e5e5e5 !important
+}
+
+
+/*预约详情*/
+
+.reservation__De_div {
+  line-height: 30px;
+
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px;
+  zoom: 1;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.reservation__De_div span {
+  display: inline-block;
+  font-size: 14px;
+  width: 90px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  float: right;
+}
+
+.reservation__De_div span:nth-child(2) {
+  margin-right: 20px;
+}
+.reservation_de_con li{
+	display: flex;
+	justify-content: space-between;
+	padding:30px 0;
+}
+.reservation_de_con li img{
+	width: 100px;
+	height: 100px;
+	border-radius: 4px;
+}
+.reservation_de_con2{
+	width: 880px;
+	margin-left: 20px;
+}
+.reservation_de_con2 .title{
+	font-size: 18px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	line-height: 25px;
+	box-sizing: border-box;
+}
+.reservation_de_con2 .title1{
+	width: 100%;
+	margin-right: 160px;
+	display: inline-block;
+}
+.reservation_de_con2 .title .title_right{
+	float: right;
+	color: #046738
+}
+.reservation_de_con2 .content{
+	line-height: 25px;
+	font-size: 16px;
+}
+.reservation_de_cont1{
+	margin-bottom:30px; 
+	border-top: 2px solid #046738
+}
+.reservation_de_cont1 .title{
+	display: inline-block;
+	font-size: 18px;
+	color: #046738;
+	width: 100%;
+	line-height: 55px;
+	border-bottom: 1px solid #e5e5e5
+}
+.reservation_de_cont1 .content{
+	line-height: 75px;
+	font-size: 18px;
+	border-bottom: 1px solid #e5e5e5
+}
+
+/*我的收藏*/
+.collect_top{
+width:100%;
+border-bottom: 1px solid #046738
+}
+.collect_top_span{
+	display: inline-block;
+	line-height: 55px;
+	width: 140px;
+	text-align: left;
+	border-bottom:2px solid #046738;
+	margin-bottom: -1px;
+	font-size: 24px;
+	color: #046738
+}
+/*我的地址*/
+.addcity_top{
+  float: right;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #046738;
+  border:1px solid #046738;
+  border-radius: 50%;
+  margin-top: 20px;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}

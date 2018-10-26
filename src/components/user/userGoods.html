@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我的订单</title>
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/aui-lazyload.js"></script>
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/aui-dialog.js" ></script>
+    <style type="text/css">
+    .text-white {
+        color: #ffffff !important;
+    }
+
+    .aui-grid [class*=aui-col-] {
+        padding: 0.75rem 0;
+    }
+
+    .list_tight {
+        zoom: 1;
+        overflow: hidden;
+    }
+
+    .list_tight div {
+        float: right;
+        border: 1px solid #eee;
+        padding: 2px;
+    }
+
+    .list_tight div:nth-child(1) {
+        margin-right: .75rem
+    }
+
+    .list_tight div:nth-child(2) {
+        margin-right: 10px;
+    }
+
+    .aui-list-item-title2 {
+        text-align: right;
+        color: #046738 !important
+    }
+    </style>
+    <script>
+    app.controller("userMake", function($scope, $http, ajaxGetData, $location) {
+        $scope.typeell = function(obj) {
+            $scope.obj = obj
+            ajaxGetData.httpGet($http, 'publish/getPublishAndOrderOfManage?userId=1&orderType=' + obj, function(res) {
+                if (res.status == '200') {
+
+                    $scope.data = res.data
+                    console.log($scope.data)
+                    // console.log(res.data)
+                } else {
+                    alert(res.message);
+                }
+            });
+        }
+        $scope.typeell('0')
+        $scope.removemake = function(timeId, orderId, Isindex, Iindex) {
+            ajaxGetData.httpPost($http, 'order/cancelAnAppointment', { orderId: orderId, timeId: timeId }, function(res) {
+                if (res.status == '200') {
+
+                    if ($scope.data[Isindex].orderDetailList.length == "0") {
+                        $scope.data.splice(Isindex, 1)
+                    } else {
+                        $scope.data[Isindex].orderDetailList.splice(Iindex, 1)
+                    }
+                } else {
+                    alert(res.message);
+                }
+            });
+        }
+        $scope.successmake = function(timeId, orderId, Isindex, Iindex) {
+            ajaxGetData.httpPost($http, 'order/finishAnAppointment', { orderId: orderId, timeId: timeId }, function(res) {
+                if (res.status == '200') {
+                    if ($scope.data[Isindex].orderDetailList.length == "0") {
+                        $scope.data.splice(Isindex, 1)
+                    } else {
+                        $scope.data[Isindex].orderDetailList.splice(Iindex, 1)
+                    }
+                } else {
+                    alert(res.message);
+                }
+            });
+        }
+        $scope.ratings = function(score){
+             var dialog = new auiDialog();
+            dialog.alert({
+                title: "提示",
+                msg: '当前评分为'+score+'分' ,
+                buttons: ['确定']
+            });
+        }
+        // $scope.Rescheduling = function(timeId, orderId, Isindex, Iindex){
+
+        // }
+        // 联系达人
+        // $scope.Contact = function(Contact) {
+        //     var dialog = new auiDialog();
+        //     dialog.alert({
+        //         title: "提示",
+        //         msg: Contact ,
+        //         buttons: ['确定']
+        //     });
+        // }
+    });
+    </script>
+</head>
+
+<body ng-app="myApp">
+    <!-- 顶部 -->
+    <div ng-controller="userMake" class="user">
+        <header class="aui-bar aui-bar-nav">
+            <a class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+            <div class="aui-title">我的预约</div>
+        </header>
+        <div class="aui-tab" id="tab">
+            <div class="aui-tab-item" ng-click="typeell('0')">全部</div>
+            <div class="aui-tab-item" ng-click="typeell('1')">已预约</div>
+            <div class="aui-tab-item" ng-click="typeell('2')">进行中</div>
+            <div class="aui-tab-item" ng-click="typeell('3')">待评分</div>
+            <div class="aui-tab-item" ng-click="typeell('4')">已完成</div>
+            <div class="aui-tab-item" ng-click="typeell('5')">已取消</div>
+        </div>
+        <div class="aui-content">
+            <ul class="aui-list aui-media-list" ng-repeat="items in data" ng-init="Isindex = $index">
+                <li class="aui-list-header">{{items.publishName}}</li>
+                <li class="aui-list-item" ng-repeat="item in items.orderDetailList" ng-init="Iindex = $index">
+                    <a href="goodsList.html#/?publish_id={{item.publishId}}&distance={{item.distance}}" style="display: flex;height: 5rem">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media">
+                                <img ng-src="http://images.baiduyuyue.com/{{item.appointmentImgUrl}}" style="height: 100%">
+                            </div>
+                            <div class="aui-list-item-inner" style="width:calc(100% - 7rem)">
+                                <div class="aui-list-item-text" style="align-items: baseline;">
+                                    <div class="aui-list-item-title aui-ellipsis-1" style="width: 80%">
+                                        预约号： {{item.appointmentTitle}}
+                                    </div>
+                                    <div class="aui-list-item-title aui-list-item-title2 aui-ellipsis-1" style="width: 30%" ng-if="item.orderType=='1'">
+                                        已预约
+                                    </div>
+                                    <div class="aui-list-item-title aui-list-item-title2 aui-ellipsis-1" style="width: 30%" ng-if="item.orderType=='2'">
+                                        进行中
+                                    </div>
+                                    <div class="aui-list-item-title aui-list-item-title2 aui-ellipsis-1" style="width: 30%" ng-if="item.orderType=='3'">
+                                        待评分
+                                    </div>
+                                    <div class="aui-list-item-title  aui-list-item-title2 aui-ellipsis-1" style="width: 30%" ng-if="item.orderType=='4'">
+                                        已完成
+                                    </div>
+                                    <div class="aui-list-item-title  aui-list-item-title2 aui-ellipsis-1" style="width: 30%" ng-if="item.orderType=='5'">
+                                        已取消
+                                    </div>
+                                </div>
+                                <div class="aui-list-item-text"> 预约号：{{item.timeNumber}}</div>
+                                <div class="aui-list-item-text"> 用户名：{{item.timeNumber}}</div>
+                                <div class="aui-list-item-text"> 时间：{{item.timeDate}}&nbsp;{{item.timeStart}}</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div ng-if="item.orderType=='1'" class="list_tight">
+                        <div ng-click="removemake(item.timeId,item.orderId,Isindex,Iindex)">
+                            取消预约
+                        </div>
+                        <div >
+                           <a href="tel:{{item.userPhonenum}}" title="">联系达人</a>
+                        </div>
+                    </div>
+                    <div ng-if="item.orderType=='2'" class="list_tight">
+                        <div ng-click="successmake(item.timeId,item.orderId,Isindex,Iindex)">
+                            完成预约
+                        </div>
+                    </div>
+                    <div ng-if="item.orderType=='3'" class="list_tight">
+                        <div>
+                            服务评价
+                        </div>
+                    </div>
+                    <div ng-if="item.orderType=='4'" class="list_tight">
+                        <div ng-click="ratings(item.score)">
+                            查看评分
+                        </div>
+                    </div>
+                    <div ng-if="item.orderType=='5'" class="list_tight" ng-click="Rescheduling(item.timeId,item.orderId,Isindex,Iindex)">
+                        <div>
+                            重新预约
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item" id="more" style="text-align: center;font-size: .65rem;line-height: 2.25rem" ng-if="moretext">
+                    {{moretext}}
+                </li>
+                <!--    <li class="aui-list-item" id="no" ng-if="data.length==0" style="text-align: center">
+                        该分类没有预约服务
+                     </li> -->
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/aui-tab.js"></script>
+</body>
+
+</html>
